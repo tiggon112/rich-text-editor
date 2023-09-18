@@ -1,0 +1,10 @@
+.row {
+    white-space: nowrap;
+}
+
+.tool-button {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-size: large;
+}

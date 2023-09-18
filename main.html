@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Rich Text Editor</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="tool-button"><input type="radio" id="code" name="type" onclick="tagclicked(event)"/><label for="code">code</label></div>
+        <div class="tool-button"><input type="radio" id="div" name="type" onclick="tagclicked(event)" checked/><label for="div">normal</label></div>
+        <div class="tool-button"><input type="radio" id="h1" name="type" onclick="tagclicked(event)"/><label for="h1">h1</label></div>
+        <div class="tool-button"><input type="radio" id="h2" name="type" onclick="tagclicked(event)"/><label for="h2">h2</label></div>
+        <div class="tool-button"><input type="radio" id="h3" name="type" onclick="tagclicked(event)"/><label for="h3">h3</label></div>
+        <div class="tool-button"><input type="checkbox" id="bold" name="bold" onclick="styleSelected(event)"/><label for="bold">bold</label></div>
+        <div class="tool-button"><input type="checkbox" id="italic" name="italic" onclick="styleSelected(event)"/><label for="italic">italic</label></div>
+        <div class="tool-button"><input type="checkbox" id="underline" name="underline" onclick="styleSelected(event)"/><label for="underline">underline</label></div>
+        <div class="tool-button"><input type="checkbox" id="strikeThrough" name="strikeThrough" onclick="styleSelected(event)"/><label for="strikeThrough">strike</label></div>
+        <div class="tool-button"><input type="radio" id="left" name="direction" checked/><label for="left">left</label></div>
+        <div class="tool-button"><input type="radio" id="middle" name="direction"/><label for="middle">middle</label></div>
+        <div class="tool-button"><input type="radio" id="right" name="direction"/><label for="right">right</label></div>
+    </div>
+    <div>
+
+        <iframe 
+            id='editor-iframe' 
+            srcdoc="<html>
+            <head><link rel='stylesheet' type='text/css' href='editor.css'><script src='editor.js' defer></script></head>
+            <body contenteditable='true' tabindex='-1'><div class='unusual-div'></br></div></body>
+            
+            </html>"
+            width='100%' height='400px'>
+        </iframe>
+
+        <div style="width: 100%; height: 400px">
+            <textarea id="code-view" style="width: 100%; height: 100%"></textarea>
+        </div>
+    </div>
+</body>
+<script src='main.js'></script>
+
+</html>
