@@ -15,7 +15,7 @@ var observer = new MutationObserver(function(mutations) {
 });
 
 codeview.onchange = () => {
-    iframe.contentDocument.body.innerHTML = codeview.value;
+    iframe.contentDocument.body.innerHTML = codeview.value
 }
 
 function tagclicked(e) {
