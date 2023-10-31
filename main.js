@@ -1,6 +1,6 @@
 var iframe = document.getElementById('editor-iframe');
 var codeview = document.getElementById('code-view');
-// Use MutationObserver to detect changes to the DOM within the
+// Use MutationObserver to detect changes
 iframe.onload = (e) => {
     codeview.value = iframe.contentDocument.body.innerHTML;
     observer.observe(iframe.contentDocument.body, { attributes: true, childList: true, subtree: true, characterData: true});
