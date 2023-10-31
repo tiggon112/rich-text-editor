@@ -9,7 +9,6 @@ iframe.onload = (e) => {
 var observer = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
     // Access the content of the iframe
-    console.log("MutaitionObserver!");
     let iframeDoc = document.getElementById('editor-iframe').contentDocument;
     let codeview = document.getElementById('code-view');
     codeview.value = iframeDoc.body.innerHTML.replace('\uFEFF', '&#xFEFF');
